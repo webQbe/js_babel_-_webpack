@@ -1,5 +1,5 @@
+// import from lib.js
 
-// code to be complied to ES5
-let test = () => console.log("Hello");
+import { person } from "./lib";
 
-test();
+alert(person.name);
