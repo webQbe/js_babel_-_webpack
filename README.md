@@ -37,8 +37,13 @@
 3. Install dependencies:
     - `npm install --save-dev webpack webpack-dev-server babel-core babel-loader babel-preset-env`
 
-4. Create a `config` file for Webpack
+4. Create a config file for Webpack
     - `webpack.config.js`
 
-5. Add a script to `package.json` file
+5. Add a script to package.json file.
     - `"build": "webpack"`
+
+6. Create `src/app.js` file.
+
+7. Compile code in `src/app.js` file.
+    - - Run `npm run build`

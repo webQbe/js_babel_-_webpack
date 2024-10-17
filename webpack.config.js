@@ -2,34 +2,43 @@ const path = require('path');
 
 module.exports = {
 
-    //define entry points
+    mode: 'development', // or 'production'
+
+    //define entry point
     entry: {
 
-        // specify source file (entry point to app)
-        app: './src/app.js' // contains new JS features
+        // Source file with new JS features
+        app: './src/app.js' 
+
     },
 
     output:{ // compiled down to ES5
 
-        // build/app.bundle.js output location
-        path: path.resolve(__dirname, 'build'), 
-        filename: 'app.bundle.js' // file to be included in HTML
+        path: path.resolve(__dirname, 'build'),  // Output folder
+
+        filename: 'app.bundle.js' // Bundled output file to be included in HTML
 
     },
 
-    module: {
-            // babel loader module
-        loaders: [{
+    // Babel Module
+    module: {  
+        
+        rules: [{
 
-            test: /\.js?$/, // regex
+            test: /\.js?$/, // Apply regex rule to .js files
+
             exclude: /node_modules/,
-            loader: 'babel-loader',
-            query: {
 
-                presets: ['env']
+            use: {
 
+                    loader: 'babel-loader', // Use babel-loader to transpile
+
+                    options: {
+
+                        presets: ['@babel/preset-env'] // use @babel/preset-env
+                    }
             }
-
+            
         }]
 
     }
