@@ -1,5 +1,10 @@
 // import from lib.js
 
-import { person } from "./lib";
+// import array, & function
+import { person, sayHello } from "./lib";
 
-alert(person.name);
+// get and log name
+console.log(person.name);
+
+// log function output
+console.log(sayHello('Ishan'));

@@ -1,5 +1,6 @@
 
 // export means making available to other files
+// this is imported in app.js
 
 export const person = {
 
@@ -9,4 +10,10 @@ export const person = {
 
 }
 
-// this is imported in app.js
+// export a function
+export function sayHello(name){
+
+    return `Hello ${name}`;
+
+}
+
