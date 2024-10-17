@@ -51,3 +51,8 @@
 8. Start Webpack Dev Server by adding following line to `scripts` in `package.json` file:
   -  `"start": "webpack serve --open"`
   - Run `npm start`
+
+9. After creating your app, 
+    - Run `npm run build` to compile everything down to one file. 
+    - Move `index.html` and `build` folder to new `webServer` folder
+    - Open `index.html` on browser & open console to see output
