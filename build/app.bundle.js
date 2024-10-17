@@ -15,7 +15,7 @@
   \********************/
 /***/ (() => {
 
-eval("// code to be complied to ES5\nvar test = function test() {\n  return console.log(123);\n};\n\n//# sourceURL=webpack://js_babel_webpack/./src/app.js?");
+eval("// code to be complied to ES5\nvar test = function test() {\n  return console.log(123);\n};\ntest();\n\n//# sourceURL=webpack://js_babel_webpack/./src/app.js?");
 
 /***/ })
 
