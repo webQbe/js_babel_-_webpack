@@ -2,8 +2,6 @@ const path = require('path');
 
 module.exports = {
 
-    mode: 'development', // or 'production'
-
     //define entry point
     entry: {
 
@@ -16,9 +14,23 @@ module.exports = {
 
         path: path.resolve(__dirname, 'build'),  // Output folder
 
-        filename: 'app.bundle.js' // Bundled output file to be included in HTML
+        filename: 'app.bundle.js', // Bundled output file to be included in HTML
+
+        publicPath: '/build/',
 
     },
+
+    mode: 'development', 
+
+    devServer: {
+        static: {
+          directory: path.join(__dirname, './'),
+        },
+        hot: true, // Enable Hot Module Replacement
+        open: true, // Automatically open the browser
+        compress: true,
+        port: 8080,
+      },
 
     // Babel Module
     module: {  

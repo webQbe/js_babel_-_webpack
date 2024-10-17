@@ -46,4 +46,8 @@
 6. Create `src/app.js` file.
 
 7. Compile code in `src/app.js` file.
-    - - Run `npm run build`
+    - Run `npm run build`
+
+8. Start Webpack Dev Server by adding following line to `scripts` in `package.json` file:
+  -  `"start": "webpack serve --open"`
+  - Run `npm start`
